@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+    public header:string="Shop More.With Love....";
 
+    changeheader(){
+      this.header="Lets Go"
+    }
 }
