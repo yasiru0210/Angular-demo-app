@@ -18,14 +18,19 @@ export class ProductsComponent implements OnInit {
 
   public ProductList:any=[]
 
-loadProductInfo(){
-  fetch('https://fakestoreapi.com/products')
+  async loadProductInfo(){
+  /*fetch('https://fakestoreapi.com/products')
   .then(res=>res.json())
   .then(data=>{
     this.ProductList=data;
-    console.log( this.ProductList);
-  })
-
+    console.log( this.ProductList.length);
+  })*/
+  
+   let response=await fetch('https://fakestoreapi.com/products')
+            let body =await response.json()
+            this.ProductList=body;
+            console.log( this.ProductList.length);
+            
 }
   
 }

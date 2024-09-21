@@ -1,0 +1,28 @@
+<div class="container">
+   <div class="row">
+      <div>
+
+         <div class="col-6">
+         <label class="form-label" for="txt_id">Product ID </label>
+         <input class="form-control" type="text" id="txt_id" [(ngModel)]="product.id" placeholder="ID">
+
+      </div>
+      </div>
+      <div>
+
+         <div class="col-6">
+         <label class="form-label" for="txt_name">Product Name </label>
+         <input class="form-control" type="text" id="txt_name"[(ngModel)]="product.name" placeholder="Name">
+
+      </div>
+      <div class="col-6">
+         <button *ngIf="product.id!==null" (click)="register()"type="button" class="btn btn-primary " >Register</button>
+     
+      </div>
+      
+      </div>
+      
+   </div>
+
+
+
